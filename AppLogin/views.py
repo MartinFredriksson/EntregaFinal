@@ -21,7 +21,7 @@ def register(request):
 
 def login_request(request):
     if request.method == "POST":
-        form = AuthenticationForm(request, data = request.POST)
+        form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
             info = form.cleaned_data
             usu = info ["username"]
@@ -36,5 +36,4 @@ def login_request(request):
             return render(request, "AppLogin/login.html")
     else: 
         form = AuthenticationForm()
-        return render (request, "AppLogin/login.html"), {"form" : form}
-
+        return render (request, "AppLogin/login.html", {"form" : form})

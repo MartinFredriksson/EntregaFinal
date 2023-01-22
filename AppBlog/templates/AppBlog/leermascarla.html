@@ -1,0 +1,57 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">¡MAS INFORMACION DE: {{ usuario }}!</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">¡Post subido el 10/08/2021! a las 23:92 P.M.</p>
+    </div>
+</header>
+
+
+{% endblock %}
+
+
+{% block contenido_que_cambia %}
+
+<!-- INFORMACION Section-->
+<section class="page-section bg-primary text-white mb-0" id="INFORMACION DEL:" {{ usuario }}>
+    <div class="container">
+        <!-- METAS Section Heading--> 
+        <h2 class="page-section-heading text-center text-uppercase text-white">INFORMACION</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- METAS Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead"> - Hola me llamo Carla, tengo 20 años . Hace un año finalice el secundario. </p></div>
+            <div class="col-lg-4 me-auto"><p class="lead"> - Me gusta mucho el mundo del trading y el mundo criptografico, a dirio le dedico mucho tiempo de estudio y aprendizaje.</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead"> - Actualmente me dedico a realizar cursos y tradeo en una blockchain, opino que el mundo de criptografia es altamente interesante.Y que todos deberian comenzar de a poco a dentrarse ya que sin duda es algo del futuro.</p></div>
+        </div>
+        <!-- METAS Section Button-->
+        <div class="text-center mt-4">
+            
+        </div>
+    </div>
+<div class="container d-flex align-items-center flex-column">
+    <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/trading.jpeg' %}" alt="..." />
+
+
+{% endblock %}

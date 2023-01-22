@@ -1,0 +1,54 @@
+{% extends "AppBlog/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/usuarios.jpg' %}" alt="..." />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">¡USUARIOS!</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">¡LEE SOBRE MAS USUARIOS!</p>
+    </div>
+</header>
+
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<ul>
+    
+    
+    {% for Usuario in usuarios %}
+
+    <li>{{ Usuario }}</li>
+
+
+
+    <a class = "btn btn-danger" href = "{% url 'eliminarUsuario' Usuario.id %}" > Eliminar </a>
+
+    <a class = "btn btn-success" href ="{% url 'editarUsuario' Usuario.id %}"> Editar </a> 
+    
+    <a class = "btn btn-success" href ="{% url 'leermas' Usuario.id %}">Leer Mas </a> 
+   
+    {% endfor %}
+    
+    
+    
+
+</ul>
+
+<a class = "btn btn-primary" href = "{% url 'usuarioFormulario' %}"> Agregar Usuario </a>
+
+
+{% endblock %}
+

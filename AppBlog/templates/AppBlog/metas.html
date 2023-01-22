@@ -2,6 +2,29 @@
 
 {% load static %}
 
+{% block titulo %}
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/martinfredriksson.jpg' %}" alt="..." />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">¡Martin Fredriksson!</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">¡Estudiante - Futuro Programador!</p>
+    </div>
+</header>
+
+{% endblock %}
+
 {% block contenido_que_cambia %}
 
 <!-- METAS Section-->
@@ -17,8 +40,8 @@
         </div>
         <!-- METAS Section Content-->
         <div class="row">
-            <div class="col-lg-4 ms-auto"><p class="lead">En el futuro mi meta desde hace años, es poder trabajar en el exterior como programador. Si bien inicie en python como una recomendacion, en no mucho tiempo quiero adentrarme en el mundo de JavaScript.</p></div>
-            <div class="col-lg-4 me-auto"><p class="lead">Por otro lado opino, que gracias al mundo de hoy tomando las cosas buenas, la progrmacion no tiene limites, solamente uno mismo es el propio limite. Entonces es hora de aprovehcar todo lo que uno puede dar y hacer lo que le gusta.</p></div>
+            <div class="col-lg-4 ms-auto"><p class="lead">En el futuro mi meta desde hace años, es poder trabajar en el exterior como programador. Si bien inicie en python como una recomendacion, en no mucho tiempo quiero adentrarme en el mundo de JavaScript y/o otros lenguajes de mayor nivel.</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">Por otro lado opino, que gracias al mundo de hoy, la progrmacion no tiene limites, solamente uno mismo es el propio limite. Entonces es hora de aprovehcar todo lo que uno puede dar y hacer lo que le gusta.</p></div>
         </div>
         <!-- METAS Section Button-->
         <div class="text-center mt-4">

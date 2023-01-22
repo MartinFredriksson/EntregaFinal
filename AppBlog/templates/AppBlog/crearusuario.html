@@ -2,17 +2,14 @@
 
 {% load static %}
 
-
 {% block titulo %}
-
 <!-- Masthead-->
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
-        <div class="container d-flex align-items-center flex-column">
-            <!-- Masthead Avatar Image-->
-            <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/login.png' %}" alt="..." />
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/avataaars.svg' %}" alt="..." />
         <!-- Masthead Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">INICIA SESION</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">¡GUARDA UN USUARIO!</h1>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -20,26 +17,28 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- Masthead Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">¡A CONTINUACION, RELLENA LOS CAMPOS!</p>
+        <p class="masthead-subheading font-weight-light mb-0">¡A CONTINUACION GUARDA UN USUARIO NUEVO!</p>
     </div>
 </header>
 
 
 {% endblock %}
 
-
-
 {% block contenido_que_cambia %}
 
-<form action = "{% url 'login' %}" method = "POST"> {% csrf_token %}
 
-    <table>
+<form action ="{% url 'usuarioFormulario' %}" method = "POST"> {% csrf_token %}
 
-        {{ form.as_table }}
+<table>
 
-    </table>
+    {{ form.as_table }}
 
-    <input type = "submit" velue = "INGRESAR">
+
+</table>
+
+<input type = "submit"  value = "GUARDAR USUARIO" >
+ 
+
 
 </form>
 

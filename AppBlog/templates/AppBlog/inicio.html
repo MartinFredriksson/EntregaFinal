@@ -1,6 +1,30 @@
 {% extends "AppBlog/padre.html" %}
 
 {% load static %}
+<tilte>ACERCA DE Martin Fredriksson </tilte>
+{% block titulo %}
+
+<!-- Masthead-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/martinfredriksson.jpg' %}" alt="..." />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">¡Martin Fredriksson!</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">¡Estudiante - Futuro Programador!</p>
+    </div>
+</header>
+
+
+{% endblock %}
 
 {% block contenido_que_cambia %}
 
@@ -20,12 +44,15 @@
         <div class="row">
             <div class="col-lg-4 ms-auto"><p class="lead">Hola! Mi nombre es Martin, tengo 19 años. Actualmente estudio en el curso de python de CoderHouse.</p></div>
             <div class="col-lg-4 me-auto"><p class="lead">Hace 2 años, termine la escuela secundaria, y la pasion y el gusto por la programacion con el correr del tiempo se convirtio en un deseo, por suerte hace unos meses disfruto de aprender de algo tan interesante.</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">Al no tener casi nada de conocimiento mas que conceptos, consulte. Y me recomendaron que comience por python, la realidad es que no me gustaba lo que comprendia desarollar este lenguaje. Pero con el correr de las clases y desde el dia uno disfrute mucho todo. Si bien la verdad a sido en algunos dias bastante cansador y entresante,una vez que comprendi como hacer ciertas cosas lo disfrute mucho mas.</p></div>
         </div>
         <!-- ACERCA DE MÍ Section Button-->
         <div class="text-center mt-4">
-            
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="{% static 'AppBlog/assets/img/python+.jpg' %}" alt="..." />       
         </div>
     </div>
 </section>
-
 {% endblock %}
+
